@@ -44,4 +44,8 @@ function checkWhoWins(gamePlayerTurns, gamePlayerName) {
     return gameWinner;
 }
 
-export { checkWhoWins };
+function getActivePlayer(turns = []) {
+    return turns.length > 0 && turns[0].selectedPlayer === 'X' ? 'O' : 'X';
+}
+
+export { checkWhoWins, getActivePlayer };

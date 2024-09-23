@@ -4,12 +4,7 @@ import GameBoard from "./components/GameBoard";
 import { useState } from "react";
 import Logs from "./components/Logs";
 import GameOver from "./components/GameOver";
-import  { checkWhoWins } from './utilities/utils';
-
-
-function getActivePlayer(turns = []) {
-    return turns.length > 0 && turns[0].selectedPlayer === 'X' ? 'O' : 'X';
-}
+import  { checkWhoWins, getActivePlayer } from './utilities/utils';
 
 function App() {
     const [gamePlayerTurns, setGamePlayerTurns] = useState([]);
